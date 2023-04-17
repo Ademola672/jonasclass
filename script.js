@@ -39,6 +39,7 @@ console.log(myCurrentJob);*/
 // pen = 7;
 // console.log(typeof null);
 
+//math operators
 const now = 2098;
 const ageSegun = now - 1997;
 const ageTosin = now - 2002;
@@ -50,4 +51,13 @@ console.log(ageTosin * 2, ageSegun / 10, 2 ** 3);
 const middleName = "segun";
 const firstName = "Ademola";
 
-console.log(middleName + firstName);
+console.log(typeof middleName + " " + firstName);
+
+// Assignment operators
+let x = 10 + 5; //15
+x += 10; //x = x + 10 = 25
+x *= 4; //x = x * 25 = 100
+x++; // x + 1 = 101
+x--; //x - 1 = 100
+x--; // x -1 = 99
+console.log(x);
