@@ -70,15 +70,52 @@ console.log(typeof middleName + " " + firstName);
 
 // console.log(now - 1997 > now - 2002);
 
-const now = 2098;
-const ageSegun = now - 1997;
-const ageTosin = now - 2002;
+// const now = 2098;
+// const ageSegun = now - 1997;
+// const ageTosin = now - 2002;
 
-console.log(now - 1997 > now - 2002);
+// console.log(now - 1997 > now - 2002);
 
-let x, y;
-x = y = 25 - 10 - 5; //x = y = 10, x = 10
-console.log(x, y);
+// let x, y;
+// x = y = 25 - 10 - 5; //x = y = 10, x = 10
+// console.log(x, y);
 
-const averageAge = (ageSegun + ageTosin) / 2;
-console.log(ageSegun, ageTosin, averageAge);
+// const averageAge = (ageSegun + ageTosin) / 2;
+// console.log(ageSegun, ageTosin, averageAge);
+
+// const lastName = "Oluwasegun";
+// const job = "programmer";
+// const birthYear = 1997;
+// const year = 2023;
+
+// const oluwasegunNew = `i'm ${lastName}, a ${
+//   year - birthYear
+// } years old ${job}!`;
+// console.log(oluwasegunNew);
+
+// console.log(`just a regular String...`);
+
+// console.log(`string
+// with
+// multiple
+// lines`);
+
+const age = 10;
+
+if (age >= 18) {
+  console.log("sarah can start driving 🚗");
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`sarah is too young,wait another ${yearsLeft}years`);
+}
+
+const birthYear = 2937;
+let century;
+
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+
+console.log(century);
