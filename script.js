@@ -100,22 +100,37 @@ console.log(typeof middleName + " " + firstName);
 // multiple
 // lines`);
 
-const age = 10;
+// const age = 10;
 
-if (age >= 18) {
-  console.log("sarah can start driving 🚗");
-} else {
-  const yearsLeft = 18 - age;
-  console.log(`sarah is too young,wait another ${yearsLeft}years`);
-}
+// if (age >= 18) {
+//   console.log("sarah can start driving 🚗");
+// } else {
+//   const yearsLeft = 18 - age;
+//   console.log(`sarah is too young,wait another ${yearsLeft}years`);
+// }
 
-const birthYear = 2937;
-let century;
+// const birthYear = 2937;
+// let century;
 
-if (birthYear <= 2000) {
-  century = 20;
-} else {
-  century = 21;
-}
+// if (birthYear <= 2000) {
+//   century = 20;
+// } else {
+//   century = 21;
+// }
 
-console.log(century);
+// console.log(century);
+
+// type conversion
+
+const inputYear = "1991";
+console.log(Number(inputYear));
+console.log(Number(inputYear) + 18);
+
+console.log(Number("Jonas"));
+console.log(typeof NaN);
+
+console.log(String(23));
+console.log(String(23) + "rd");
+
+//type coercion
+console.log("I am " + 23 + "years old");
