@@ -146,3 +146,32 @@ if (money) {
 } else {
   console.log("you should get a job");
 }
+
+let height = 0;
+if (height) {
+  console.log("YAY! Height is defined");
+} else {
+  console.log("height is undefined");
+}
+
+//euality class with else and if again
+
+const age = "18";
+
+if (age === 18) console.log("you just became an adult");
+
+if (age == 18) console.log("you jiust became an adult loose");
+
+const favorite = Number(prompt("whats your fave number ?"));
+console.log(favorite);
+console.log(typeof favorite);
+
+if (favorite === 23) {
+  console.log("cool! 23 is an amazing number!");
+} else if (favorite === 7) {
+  console.log("7 is also a cool number");
+} else {
+  console.log("Number is not 23 or 7");
+}
+
+if (favorite !== 23) console.log("why not 23");
