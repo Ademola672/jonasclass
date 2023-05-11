@@ -194,9 +194,11 @@ const shouldDrive = hasDriversLicense && hasGoodVision;
 // }
 
 const isTired = false;
-console.log(hasDriversLicense && hasGoodVision && isTired);
+const oldEnough = true;
 
-if (hasDriversLicense && hasGoodVision && !isTired) {
+console.log(hasDriversLicense && hasGoodVision && !isTired && oldEnough);
+
+if (hasDriversLicense && hasGoodVision && !isTired && !oldEnough) {
   console.log("sarah is able to drive");
 } else {
   console.log(" someoneelse should drive ");
