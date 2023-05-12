@@ -54,3 +54,49 @@ if (BMIMark > BMIJohn) {
 } else {
   console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})`);
 }
+
+//3rd code challenge for dolphins and koalas
+
+// const sumDolphins = 96 + 108 + 89;
+// const sumKoalas = 88 + 91 + 110;
+// const avgDolphins = sumDolphins / 3;
+// const avgKoalas = sumKoalas / 3;
+
+// console.log(avgDolphins);
+// console.log(avgKoalas);
+
+// if (avgDolphins > avgKoalas) {
+//   console.log("Dolphin wins the tournament");
+// } else if (avgDolphins === avgKoalas) {
+//   console.log(" we have a tie");
+// } else {
+//   console.log(" Koalas wins the tournament");
+// }
+
+//3rd code challenge section 2
+
+//Bonus 1
+const sumDolphins = 97 + 112 + 101;
+const sumKoalas = 109 + 95 + 123;
+const avgDolphins = sumDolphins / 3;
+const avgKoalas = sumKoalas / 3;
+const winReq = 100;
+
+console.log(avgDolphins);
+console.log(avgKoalas);
+
+if (avgDolphins > avgKoalas && avgDolphins >= 100) {
+  console.log("Dolphins take the trophy home");
+} else if (avgKoalas > avgDolphins && avgKoalas >= 100) {
+  console.log("Koalas wins the tournamen");
+} else if (
+  avgDolphins === avgKoalas &&
+  avgDolphins >= 100 &&
+  avgKoalas >= 100
+) {
+  console.log("both team wins the tournament");
+} else {
+  console.log("No one wins the trophy");
+}
+
+//Bonus 2

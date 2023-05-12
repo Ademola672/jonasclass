@@ -187,11 +187,11 @@ console.log(!hasDriversLicense);
 
 const shouldDrive = hasDriversLicense && hasGoodVision;
 
-// if (shouldDrive) {
-//   console.log(" sarah is able to drive");
-// } else {
-//   console.log(" someoneelse should drive... ");
-// }
+if (shouldDrive) {
+  console.log(" sarah is able to drive");
+} else {
+  console.log(" someoneelse should drive... ");
+}
 
 const isTired = false;
 const oldEnough = true;
