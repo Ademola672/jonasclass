@@ -99,4 +99,14 @@ if (avgDolphins > avgKoalas && avgDolphins >= 100) {
   console.log("No one wins the trophy");
 }
 
-//Bonus 2
+// ternary assignment
+
+const bill = 40;
+
+const tip = bill >= 50 && bill <= 300 ? (15 * bill) / 100 : bill * 0.2;
+
+console.log(
+  ` the bill was ${bill}, and the tip was ${tip}, and the total value is ${
+    bill + tip
+  } `
+);
