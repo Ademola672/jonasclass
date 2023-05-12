@@ -204,10 +204,10 @@ if (hasDriversLicense && hasGoodVision && !isTired && !oldEnough) {
   console.log(" someoneelse should drive ");
 }
 
-const day = "sunday";
+const day = "monday";
 
 switch (day) {
-  case "monday":
+  case "monday": // day === 'monday'
     console.log("Plan course structure");
     console.log(" Go to coding meet up ");
     break;
@@ -227,4 +227,21 @@ switch (day) {
     break;
   default:
     console.log("Not a valid day");
+}
+//switch statement to if else statement
+// const day = "monday";
+
+if (day === "monday") {
+  console.log("Plan course structure");
+  console.log(" Go to coding meet up ");
+} else if (day === "tuesday") {
+  console.log("Prepare theory videos");
+} else if (day === "wednesday" || day === "thursday") {
+  console.log("Write code examples");
+} else if (day === "friday") {
+  console.log("Record videos");
+} else if (day === "saturday" || day === "sunday") {
+  console.log("Enjoy the weekend");
+} else {
+  console.log("Not a valid day");
 }
