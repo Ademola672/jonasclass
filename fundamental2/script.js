@@ -10,16 +10,16 @@
 
 // function
 
-function logger() {
-  console.log("My name is oluwasegun");
-}
-// calling/running or invoking the function
-logger();
-logger();
-logger();
+// function logger() {
+//   console.log("My name is oluwasegun");
+// }
+// // calling/running or invoking the function
+// logger();
+// logger();
+// logger();
 
-function fruitProcessor(apples, oranges) {
-  //   console.log(apples, oranges);
+// function fruitProcessor(apples, oranges) {
+//   console.log(apples, oranges);
 //   const juice = `juice with ${apples} apples and ${oranges} oranges.`;
 //   return juice;
 // }
@@ -62,3 +62,15 @@ function fruitProcessor(apples, oranges) {
 
 // const age2 = calcAge2(1991);
 // console.log(age1, age2);
+
+const calcAge2 = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+const age2 = calcAge2(1991);
+console.log(age2);
+
+//arrow function
+const calcAge3 = (birthYear) => 2037 - birthYear;
+const age3 = calcAge3(1991);
+console.log(age3);
