@@ -20,12 +20,45 @@ logger();
 
 function fruitProcessor(apples, oranges) {
   //   console.log(apples, oranges);
-  const juice = `juice with ${apples} apples and ${oranges} oranges.`;
-  return juice;
-}
+//   const juice = `juice with ${apples} apples and ${oranges} oranges.`;
+//   return juice;
+// }
 
-const appleJuice = fruitProcessor(5, 0);
-console.log(appleJuice);
+// const appleJuice = fruitProcessor(5, 0);
+// console.log(appleJuice);
 
-const appleOrangeJuice = fruitProcessor(2, 4);
-console.log(appleOrangeJuice);
+// const appleOrangeJuice = fruitProcessor(2, 4);
+// console.log(appleOrangeJuice);
+
+// // function makePorridge(yam, beans) {
+// //   const porridge = `make with ${yam} tubers of yam and ${beans} cups of beans`;
+// //   return porridge;
+// // }
+// // const makeHe = makePorridge(4, 8);
+// // console.log(makeHe);
+// // document.write(makeHe);
+
+// function makePPorridge(yam, beans) {
+//   const porridge = `make ${yam} tubers of yam and ${beans}cups of beans`;
+//   return porridge;
+// }
+
+// const makeFood = makePPorridge(10, 10);
+// const makeFoods = makePPorridge(100, 10);
+// console.log(makeFood);
+// console.log(makeFoods);
+
+// function calcAge1(birthYear) {
+//   const age = 2037 - birthYear;
+//   return age;
+// }
+
+// const age1 = calcAge1(1991);
+// // console.log(age1);
+// // function expression
+// const calcAge2 = function (birthYear) {
+//   return 2037 - birthYear;
+// };
+
+// const age2 = calcAge2(1991);
+// console.log(age1, age2);
