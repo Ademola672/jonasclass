@@ -163,3 +163,37 @@ const ages = [
 ];
 
 console.log(ages);
+//array operator///////////////////////////////////////////
+const friendss = ["Michea", "Steven", "Peter"];
+//Add Element///////////////////////////////////
+const newLength = friendss.push("Jay");
+console.log(friendss);
+console.log(newLength);
+
+const newLength2 = friendss.unshift("John");
+console.log(friendss);
+console.log(newLength2);
+//Remove element //////////////////////
+const poppeds = friendss.pop(); ///last element of the array
+console.log(friendss);
+console.log(poppeds);
+
+const popped = friendss.pop(); //peter should also be gone
+console.log(friendss);
+console.log(popped);
+
+const shift = friendss.shift(); //First
+console.log(friendss);
+console.log(shift);
+
+console.log(friendss.indexOf("Steven"));
+console.log(friendss.indexOf("Bob"));
+
+friendss.push(23);
+console.log(friendss.includes("Steven"));
+console.log(friendss.includes("Bob"));
+console.log(friendss.includes(23));
+
+if (friendss.includes("Steven")) {
+  console.log("you have a called Steven");
+}
