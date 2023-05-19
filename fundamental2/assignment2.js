@@ -56,3 +56,32 @@ const checkWinner = function (avgDolphins, avgKoalas) {
 };
 
 checkWinner(scoreDolphins, scoreKoalas);
+
+/////////////////////////array assignment /////////////////////////////
+const bills = [125, 555, 44]; ///////actual bill
+const calcTip = function (bills) {
+  return bills >= 50 && bills <= 300 ? bills * 0.15 : bills * 0.2; ////////returns the tip calculations
+};
+
+const tip1 = calcTip(bills[0]); /////tip for the first element
+console.log(tip1);
+
+const tip2 = calcTip(bills[1]); /////tip for the second element
+console.log(tip2);
+
+const tip3 = calcTip(bills[2]); /////tip for the third element
+console.log(tip3);
+
+const tips = [tip1, tip2, tip3]; ///////array for the tips
+console.log(tips);
+
+const calcTotal = function (bills, tips) {
+  return bills + tips; // returns the total calculations  i.e bill + tips
+};
+
+const total1 = calcTotal(bills[0], tips[0]); //// toytal for bill 1
+const total2 = calcTotal(bills[1], tips[1]); //// toytal for bill 2
+const total3 = calcTotal(bills[2], tips[2]); //// toytal for bill 3
+
+const total = [total1, total2, total3]; ///// arrays for the total
+console.log(total);
