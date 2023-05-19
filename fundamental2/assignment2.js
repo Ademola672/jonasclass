@@ -63,6 +63,9 @@ const calcTip = function (bills) {
   return bills >= 50 && bills <= 300 ? bills * 0.15 : bills * 0.2; ////////returns the tip calculations
 };
 
+// const calcTip = (bill) =>
+//   bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2; //////// arrow function
+
 const tip1 = calcTip(bills[0]); /////tip for the first element
 console.log(tip1);
 
