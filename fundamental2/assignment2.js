@@ -88,3 +88,53 @@ const total3 = calcTotal(bills[2], tips[2]); //// toytal for bill 3
 
 const total = [total1, total2, total3]; ///// arrays for the total
 console.log(total);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const mark = {
+  firstName: "Mark",
+  lastName: "Miller",
+  mass: 78,
+  height: 1.69,
+  calcBmi: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  },
+};
+
+const john = {
+  firstName: "John",
+  lastName: "Smith",
+  mass: 92,
+  height: 1.95,
+  calcBmi: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  },
+};
+
+console.log(mark.calcBmi(), john.calcBmi());
+// document.write(mark.calcBmi(), john.calcBmi());
+if (mark.bmi > john.bmi) {
+  console.log(
+    `${mark.firstName} ${
+      mark.lastName
+    }'s BMI ${mark.calcBmi()} is higher than ${john.firstName} ${
+      john.lastName
+    }'s BMI ${john.calcBmi()}`
+  );
+} else if (john.bmi > mark.bmi) {
+  console.log(
+    `${john.firstName} ${
+      john.lastName
+    }'s BMI ${john.calcBmi()} is higher than ${mark.firstName} ${
+      mark.lastName
+    }'s BMI ${mark.calcBmi()}`
+  );
+} else {
+  console.log(
+    `${mark.firstName} ${
+      mark.lastName
+    }'s BMI ${mark.calcBmi()} is the same as ${john.firstName} ${
+      john.lastName
+    }'s BMI ${john.calcBmi()}`
+  );
+}
