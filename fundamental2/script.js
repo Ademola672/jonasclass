@@ -340,19 +340,19 @@ console.log(ages);
 //   }
 // }
 
-for (let rep = 1; rep <= 10; rep++) {
-  //   console.log(`----lifting weight repetition ${rep}`);
-}
-let rep = 1;
-while (rep <= 10) {
-  //   console.log(`----lifting weight repetition ${rep}`);
-  rep++;
-}
+// for (let rep = 1; rep <= 10; rep++) {
+//   //   console.log(`----lifting weight repetition ${rep}`);
+// }
+// let rep = 1;
+// while (rep <= 10) {
+//   //   console.log(`----lifting weight repetition ${rep}`);
+//   rep++;
+// }
 
-let dice = Math.trunc(Math.random() * 6);
-console.log(dice);
+// let dice = Math.trunc(Math.random() * 6);
+// console.log(dice);
 
-while (dice !== 6) {
-  console.log(`You rolled a ${dice} `);
-  if (dice === 6) console.log("loop is about to end");
-}
+// while (dice !== 6) {
+//   console.log(`You rolled a ${dice} `);
+//   if (dice === 6) console.log("loop is about to end");
+// }
