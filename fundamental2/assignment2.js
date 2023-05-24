@@ -21,7 +21,7 @@
 //   }
 // };
 
-const calcAverage = (a, b, c) => (a + b + c) / 3;
+// const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 // text 1//////////////////////////////////////////////////////////////////////////////////////
 // let scoreDolphins = calcAverage(44, 23, 71);
@@ -163,7 +163,7 @@ const calcAverage = (a, b, c) => (a + b + c) / 3;
 /////correcrtionnn///////////////////////////////////////////////////
 //i got it but did it different way ////////////////////////
 const calcTip = function (bills) {
-  return bills >= 50 && bills <= 300 ? bills * 0.5 : bills * 0.2;
+  return bills >= 50 && bills <= 300 ? bills * 0.15 : bills * 0.2;
 };
 
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
@@ -177,3 +177,14 @@ for (let i = 0; i < bills.length; i++) {
 }
 
 console.log(bills, tips, totals);
+
+const calcAverage = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    //sum = sum + arr[i]
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
