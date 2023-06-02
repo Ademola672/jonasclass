@@ -10,6 +10,9 @@ const diceEl = document.querySelector(".dice");
 const btnNew = document.querySelector(".btn--new");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const closeModal = document.querySelector(".close-modal");
 
 let scores, currentScore, activePlayer, playing;
 typeof playing;
@@ -46,6 +49,11 @@ const switchPlayer = function () {
   currentScore = 0;
   player0El.classList.toggle("player--active");
   player1El.classList.toggle("player--active");
+};
+
+const killModal = function () {
+  overlay.classList.add("hidden");
+  modal.classList.add("hidden");
 };
 
 // Rolling dice functionality?
@@ -98,4 +106,14 @@ btnHold.addEventListener("click", function () {
 
 btnNew.addEventListener("click", function () {
   init();
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+});
+
+overlay.addEventListener("click", function () {
+  killModal();
+});
+
+closeModal.addEventListener("click", function () {
+  killModal();
 });

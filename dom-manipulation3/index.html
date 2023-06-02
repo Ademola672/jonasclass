@@ -34,7 +34,30 @@
       <button class="btn btn--new">🔄 New game</button>
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
+
+      
+      </div>
     </main>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h2 class="inst">instructions</h2>
+      <ol>
+        <li>The game should only be played by 2 players</li>
+        <li>player 1 starts the game by rolling the dice</li>
+        <li>
+          player will choose to hold or keep rolling the dice if the outcome
+          of your dice is not 1
+        </li>
+        <li>when a player rolls 1,automatically the next player plays</li>
+        <li>
+          when the dice is rolled ,the outcome is added together till you
+          decide to hold
+        </li>
+        <li>The score holded will be displayed</li>
+        <li>First to reach 100 wins the game</li>
+      </ol>
+    </div>
+    <div class="overlay hidden"></div>
     <script src="/jonasclass/dom-manipulation3/script.js"></script>
   </body>
 </html>
