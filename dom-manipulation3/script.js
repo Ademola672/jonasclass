@@ -8,6 +8,7 @@ const current0El = document.getElementById("current--0");
 const current1El = document.getElementById("current--1");
 const diceEl = document.querySelector(".dice");
 const btnNew = document.querySelector(".btn--new");
+const btnI = document.querySelector(".btn--I");
 const btnRoll = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 const modal = document.querySelector(".modal");
@@ -106,6 +107,9 @@ btnHold.addEventListener("click", function () {
 
 btnNew.addEventListener("click", function () {
   init();
+});
+
+btnI.addEventListener("click", function () {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 });

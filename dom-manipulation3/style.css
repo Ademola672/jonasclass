@@ -132,6 +132,11 @@ main {
 .btn--new {
   top: 4rem;
 }
+
+.btn--I {
+  top: 9rem;
+  font-size: 1.3rem;
+}
 .btn--roll {
   top: 39.3rem;
 }
