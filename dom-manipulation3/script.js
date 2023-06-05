@@ -121,5 +121,3 @@ overlay.addEventListener("click", function () {
 closeModal.addEventListener("click", function () {
   killModal();
 });
-
-!
