@@ -26,7 +26,13 @@ const restaurant = {
       close: 24,
     },
   },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3} `
+    );
+  },
 };
+
 //spread operators//////////////////////////////////////
 // copy array
 const mainMenuCopy = [...restaurant.mainMenu];
@@ -38,6 +44,31 @@ console.log(menu);
 //Iterables: arrays, strings, maps, sets, Not objects
 const str = "Jonas";
 const letters = [...str, " ", "s."];
+console.log(letters);
+console.log(...str);
+// console.log(`${...str} schmedtmann`)// not gonna work
+
+//Real-World example
+
+const ingredients = [
+  // prompt("Let's make pasta! Ingredient 1?"),
+  // prompt("Ingredient 2"),
+  // prompt("Ingredient 3"),
+];
+
+console.log(ingredients);
+
+restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+restaurant.orderPasta(...ingredients);
+
+//objects
+const newRestaurant = { founded: 1998, ...restaurant, founder: "ademola" };
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = " Ristorante Roma";
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
 
 //Destructuring objects///////////////////////////////////////////////////
 //   order: function (starterIndex, mainIndex) {
