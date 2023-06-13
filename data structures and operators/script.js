@@ -38,6 +38,15 @@ const restaurant = {
   },
 };
 
+restaurant.numGuests = 0;
+guests = restaurant.numGuests || 10;
+console.log(guests);
+
+//Nullish :NULL and undefined  (NOT 0 or "")
+const guestCorret = restaurant.orderPizza ?? 10;
+console.log(guestCorret);
+/*
+//////short circuiting (&& and ||)///////////////////////////////
 console.log("------OR------");
 //Use Any data type, return ANY data type, short circuiting
 console.log(3 || "Jonas");
@@ -63,7 +72,7 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
-/*
+
 //SPREAD, because on right side of =
 const arr = [1, 2, ...[3, 4]];
 
