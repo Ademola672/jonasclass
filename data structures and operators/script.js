@@ -38,6 +38,22 @@ const restaurant = {
   },
 };
 
+console.log("------OR------");
+//Use Any data type, return ANY data type, short circuiting
+console.log(3 || "Jonas");
+console.log("" || "Jonas");
+console.log(true || 0);
+console.log(undefined || null);
+
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log("------AND------");
+
 //SPREAD, because on right side of =
 const arr = [1, 2, ...[3, 4]];
 
