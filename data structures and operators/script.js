@@ -53,7 +53,17 @@ const guests2 = restaurant.numGuests || 10;
 console.log(guests2);
 
 console.log("------AND------");
+console.log(0 & "Jonas");
+console.log(7 & "Jonas");
 
+console.log("hello" && 23 && null && "jonas");
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza("mushrooms", "spinach");
+}
+
+restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
+/*
 //SPREAD, because on right side of =
 const arr = [1, 2, ...[3, 4]];
 
@@ -215,3 +225,4 @@ console.log(restaurant.name);
 // console.log(i, j, k);
 
 // //Default values
+*/
