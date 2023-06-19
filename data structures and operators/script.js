@@ -38,27 +38,35 @@ const restaurant = {
   },
 };
 
-const rest1 = {
-  name: "Capri",
-  numGuests: 0,
-};
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
-const rest2 = {
-  name: "La Plazza",
-  owner: "Giovanni Rossi",
-};
-// OR assignment operator///////////////////////////////////////////
-// rest1.numGuests = rest1.numGuests || 10; // same thing as rest1.numGuests ||= 10
-// rest2.numGuests = rest2.numGuests || 20; // same thing as rest2.numGuests ||= 20
+for (const item of menu) console.log(item);
 
-//nullish assignment operator (nill or undefined)
-rest1.numGuests ??= 10;
-rest2.numGuests ??= 10;
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el} `);
+}
 
-rest1.owner = rest1.owner && "<ANONYMOUS>"; // rest1.owner &&= '<ANONYMOUUS>'
-rest2.owner = rest2.owner && "<ANONYMOUS>"; // rest2.owner &&= '<ANONYMOUUS>'
-console.log(rest1);
-console.log(rest2);
+// const rest1 = {
+//   name: "Capri",
+//   numGuests: 0,
+// };
+
+// const rest2 = {
+//   name: "La Plazza",
+//   owner: "Giovanni Rossi",
+// };
+// // OR assignment operator///////////////////////////////////////////
+// // rest1.numGuests = rest1.numGuests || 10; // same thing as rest1.numGuests ||= 10
+// // rest2.numGuests = rest2.numGuests || 20; // same thing as rest2.numGuests ||= 20
+
+// //nullish assignment operator (nill or undefined)
+// rest1.numGuests ??= 10;
+// rest2.numGuests ??= 10;
+
+// rest1.owner = rest1.owner && "<ANONYMOUS>"; // rest1.owner &&= '<ANONYMOUUS>'
+// rest2.owner = rest2.owner && "<ANONYMOUS>"; // rest2.owner &&= '<ANONYMOUUS>'
+// console.log(rest1);
+// console.log(rest2);
 /*
 
 /////////////////////////////////////////////////////
