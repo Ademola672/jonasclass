@@ -38,6 +38,30 @@ const restaurant = {
   },
 };
 
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+//WITH optional chaining
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
+
+//Example
+const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+for (const day of days) {
+  const open = restaurant.openingHours[day]?.open ?? "Closed";
+  console.log(`On ${day}, We open at ${open}`);
+}
+
+//Methods
+console.log(restaurant.order?.(0, 1) ?? " Method does not exist");
+
+//Arrays
+const user = [{ name: " Jonas", email: " helllo@jonas.io" }];
+
+console.log(user[0]?.name ?? "User array empty");
+/*
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//For of loop
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 for (const item of menu) console.log(item);
@@ -67,7 +91,7 @@ for (const [i, el] of menu.entries()) {
 // rest2.owner = rest2.owner && "<ANONYMOUS>"; // rest2.owner &&= '<ANONYMOUUS>'
 // console.log(rest1);
 // console.log(rest2);
-/*
+
 
 /////////////////////////////////////////////////////
 //The Nullish Coalescing Operator
