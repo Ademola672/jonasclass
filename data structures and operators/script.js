@@ -37,7 +37,28 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
+//Property NAMES
+const properties = Object.keys(restaurant.openingHours);
+console.log(properties);
+let openStr = `We are open on ${properties.length} days:`;
 
+for (const day of properties) {
+  openStr += `${day}, `;
+}
+console.log(openStr);
+
+//Property VALUES
+const values = Object.values(restaurant.openingHours);
+console.log(values);
+
+//Entire Object
+const entries = Object.entries(restaurant.openingHours);
+console.log(entries);
+
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} We open at ${open} and close at ${close}`);
+}
+/*
 if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
 
@@ -59,7 +80,7 @@ console.log(restaurant.order?.(0, 1) ?? " Method does not exist");
 const user = [{ name: " Jonas", email: " helllo@jonas.io" }];
 
 console.log(user[0]?.name ?? "User array empty");
-/*
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //For of loop
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
