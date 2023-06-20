@@ -37,7 +37,7 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
-
+/*
 const orderSet = new Set([
   "Pasta",
   "Pizza",
@@ -83,7 +83,7 @@ console.log([...question]);
 // console.log([...question.entries()]);
 console.log([...question.keys()]);
 console.log([...question.values()]);
-/*
+
 ////////////////////////////////////////////////////////////
 //Maps Fundamentals
 const rest = new Map();
