@@ -37,6 +37,77 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
+
+const orderSet = new Set([
+  "Pasta",
+  "Pizza",
+  "Pizza",
+  "Risotto",
+  "Pasta",
+  "Pizza",
+]);
+
+////////////////////////////////////////////////////////////
+//Maps
+const rest = new Map();
+rest.set("name", "Classico Italiano");
+rest.set(1, "Firenze, Italy");
+console.log(rest.set(2, "Lisbon, Portugal"));
+
+rest
+  .set("categories", ["Italian", "Pizzeria", "Vegetarian", "Organic"])
+  .set("Open", 11)
+  .set("Close", 23)
+  .set(true, "We are open 😃")
+  .set(false, "We are closed ⛔");
+
+console.log(rest.get("name"));
+console.log(rest.get(true));
+console.log(rest.get(1));
+
+const time = 21;
+console.log(rest.get(time > rest.get("Open") && time < rest.get("Close")));
+
+console.log(rest.has("categories"));
+rest.delete(2);
+const arr = [1, 2];
+rest.set(arr, " Test");
+rest.set(document.querySelector("h1"), "Heading");
+console.log(rest);
+console.log(rest.size);
+// rest.clear();
+// console.log(rest);
+
+console.log(rest.get(arr));
+
+/*
+////////////////////////////////////////////////////////////////
+//Sets
+console.log(orderSet);
+
+console.log(new Set("JONAS"));
+console.log(orderSet.size);
+console.log(orderSet.has("Pizza"));
+console.log(orderSet.has("Bread"));
+orderSet.add("Garlic Bread");
+orderSet.add("Garlic Bread");
+orderSet.delete("Risotto");
+console.log(orderSet);
+
+for (const order of orderSet) console.log(order);
+
+//Example
+const staff = ["Waiter", "Chef", "Waiter", " Manager", "Chef", "Waiter"];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+
+console.log(
+  new Set(["Waiter", "Chef", "Waiter", " Manager", "Chef", "Waiter"]).size
+);
+
+console.log(new Set("AdemolaOluwasegun").size);
+
+
 //Property NAMES
 const properties = Object.keys(restaurant.openingHours);
 console.log(properties);
