@@ -39,6 +39,69 @@ const restaurant = {
 };
 
 const airline = "TAP AIR PORTUGAL";
+
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+//Fix capitalization in name
+const passenger = "jOnAs"; //Jonas
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
+
+// comparing email
+const email = "hello@jonas.io";
+const loginEmail = " Hello@jonas.Io \n";
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim();
+// console.log(trimmedEmail);
+
+const normalizeEmail = loginEmail.toLowerCase().trim();
+console.log(normalizeEmail);
+console.log(email === normalizeEmail);
+
+// replacing
+const priceGB = "288,97#";
+const priceUS = priceGB.replace("#", "$").replace(",", ".");
+console.log(priceUS);
+
+const announcement =
+  "ALL passengers come to boarding door 23, Boardinf door 23!";
+
+console.log(announcement.replace("door", "gate"));
+console.log(announcement.replace(/door/g, "gate"));
+
+//Booleans
+
+const plane = "Airbus A320neo";
+console.log(plane.includes("A320"));
+console.log(plane.includes("Boeing"));
+console.log(plane.startsWith("Air"));
+
+if (plane.startsWith("Air") && plane.endsWith("neo")) {
+  console.log("Part of the NEW Airbus family");
+}
+
+//Practice exercise
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes("knife") || baggage.includes("gun")) {
+    console.log("YOU are NOT allowed on board");
+  } else {
+    console.log("Welcome aboard");
+  }
+};
+
+checkBaggage("I have a laptop, some Food and a pocket Knife");
+checkBaggage("Socks and camera");
+checkBaggage("Got some snacks and a gun for protection");
+
+/*
+//////////////////////////////////////////////////////////////////////////////////////
+// Working with string part 1
+const airline = "TAP AIR PORTUGAL";
 const plane = "A320";
 
 console.log(plane[0]);
@@ -79,7 +142,7 @@ console.log(typeof new String("Jonas").slice(-1));
 
 ////////////////////////////////////////////////////////////////
 //coding challenge 3/////////
-/*
+
 const orderSet = new Set([
   "Pasta",
   "Pizza",
@@ -159,7 +222,6 @@ console.log(rest.size);
 
 console.log(rest.get(arr));
 
-
 ////////////////////////////////////////////////////////////////
 //Sets
 console.log(orderSet);
@@ -185,7 +247,6 @@ console.log(
 );
 
 console.log(new Set("AdemolaOluwasegun").size);
-
 
 //Property NAMES
 const properties = Object.keys(restaurant.openingHours);
