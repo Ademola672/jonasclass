@@ -58,7 +58,7 @@ const newPassport = function (person) {
 
 newPassport(jonas);
 checkIn(flight, jonas);
-*/
+
 
 const oneWord = function (str) {
   return str.replace(/ /g, "").toLowerCase();
@@ -86,3 +86,21 @@ const high5 = function () {
 //JS uses callbacks all the time
 // document.body.addEventListener("click", high5);
 ["Jonas", "Martha", "Adam"].forEach(high5);
+*/
+
+const bi = function (str) {
+  return str.replace(/ /g, " ").toUpperCase();
+};
+
+const tol = function (pan) {
+  const [first, ...others] = pan.split(" ");
+  return [first.toUpperCase(), ...others];
+};
+
+const oga = function (biro, pen) {
+  console.log(`${biro}`);
+  console.log(`${pen(biro)}`);
+};
+
+oga("betTer dAys aheAd", tol);
+oga("betTer dAys aheAd", bi);
