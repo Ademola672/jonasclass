@@ -86,7 +86,7 @@ const high5 = function () {
 //JS uses callbacks all the time
 // document.body.addEventListener("click", high5);
 ["Jonas", "Martha", "Adam"].forEach(high5);
-*/
+
 
 const bi = function (str) {
   return str.replace(/ /g, " ").toUpperCase();
@@ -104,3 +104,23 @@ const oga = function (biro, pen) {
 
 oga("betTer dAys aheAd", tol);
 oga("betTer dAys aheAd", bi);
+*/
+
+// const greet = function (greeting) {
+//   return function (name) {
+//     console.log(`${greeting} ${name}`);
+//   };
+// };
+
+// const greeterHey = greet("Hey");
+// greeterHey("Ademola");
+// greeterHey("Oluwasegun");
+
+//
+// greet("hello")("Durotimi");
+//arrow function
+const greet = (greeting) => (name) => console.log(`${greeting} ${name}`);
+
+const greeterHey = greet("Hey");
+greeterHey("Ademola");
+greeterHey("Oluwasegun");
