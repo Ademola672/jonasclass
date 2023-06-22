@@ -104,7 +104,7 @@ const oga = function (biro, pen) {
 
 oga("betTer dAys aheAd", tol);
 oga("betTer dAys aheAd", bi);
-*/
+
 
 // const greet = function (greeting) {
 //   return function (name) {
@@ -124,3 +124,53 @@ const greet = (greeting) => (name) => console.log(`${greeting} ${name}`);
 const greeterHey = greet("Hey");
 greeterHey("Ademola");
 greeterHey("Oluwasegun");
+*/
+
+const lufthansa = {
+  airline: "Lufthansa",
+  iataCode: "LH",
+  bookings: [],
+  //book: function() {}
+
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode} ${flightNum}`, name });
+  },
+};
+
+lufthansa.book(239, "Ademola Oluwasegun".toUpperCase());
+lufthansa.book(639, "Ademola Dami".toUpperCase());
+// console.log(lufthansa);
+
+const eurowings = {
+  airline: "Eurowings",
+  iataCode: "EW",
+  bookings: [],
+};
+
+const book = lufthansa.book;
+
+//Does NOT work
+//book(23, 'Sarah Williams')
+//Call method
+book.call(eurowings, 23, "Olude Mariam");
+// console.log(eurowings);
+
+book.call(lufthansa, 239, "Olude baby");
+
+const swiss = {
+  airline: "Swiss Airline",
+  iataCode: "LX",
+  bookings: [],
+};
+
+book.call(swiss, 124, "Ademola Coutinho");
+
+//Aplly method
+const flightData = [583, "luk doncic"];
+// book.apply(swiss, flightData); //new way book.call(swiss, ...flightData)
+console.log(swiss);
+
+book.call(swiss, ...flightData);
