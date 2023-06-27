@@ -223,4 +223,33 @@ const addTaxRate = function (rate) {
 const addVAT2 = addTaxRate(0.23);
 console.log(addVAT2(100));
 console.log(addVAT(23));
+
+
+const runOnce = function () {
+  console.log("this will never runn again");
+};
+
+runOnce();
+// IIFE
+(function () {
+  console.log("this will never run again");
+})();
+
+(() => console.log("this will ALSO never run again"))();
 */
+
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+booker();
+booker();
+booker();
+
+console.dir(booker);
