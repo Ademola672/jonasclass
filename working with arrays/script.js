@@ -74,6 +74,7 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+/*
 let arr = ["a", "b", "c", "d", "e"];
 
 //SLICE
@@ -104,3 +105,16 @@ console.log(...arr, ...arr2);
 
 //JOIN
 console.log(letters.join("-"));
+*/
+const arr = [23, 11, 64];
+console.log(arr[0]);
+console.log(arr.at(0));
+
+//getting last array element
+console.log(arr[arr.length - 1]);
+console.log(arr.slice(-1)[0]);
+console.log(arr.at(-1));
+
+// at method also work on string
+console.log("Jonas".at(0));
+console.log("Jonas".at(-1));
