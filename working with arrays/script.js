@@ -72,7 +72,7 @@ const displayMovements = function (movements) {
     <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type} </div>
-    <div class="movements__value">${mov}</div>
+    <div class="movements__value">${mov}EUR</div>
   </div>
      `;
     containerMovements.insertAdjacentHTML("afterbegin", html);
@@ -87,6 +87,33 @@ const calcDisplayBalance = function (movements) {
 };
 
 calcDisplayBalance(account1.movements);
+
+const calcDisplaySummary = function (movements) {
+  const incomes = movements
+    .filter((mov) => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0);
+
+  labelSumIn.textContent = `${incomes}EUR`;
+
+  const out = movements
+    .filter((mov) => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
+
+  labelSumOut.textContent = `${Math.abs(out)}EUR`;
+
+  const interest = movements
+    .filter((mov) => mov > 0)
+    .map((deposit) => (deposit * 1.2) / 100)
+    .filter((int, i, arr) => {
+      console.log(arr);
+      return int >= 1;
+    })
+    .reduce((acc, int) => acc + int, 0);
+  // interest > 1)
+
+  labelSumInterest.textContent = `${interest}EUR`;
+};
+calcDisplaySummary(account1.movements);
 
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
@@ -259,4 +286,15 @@ const max = movements.reduce(
   movements[0]
 );
 console.log(max);
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const eurToUsd = 1.1;
+
+//Pipeline////////////
+const totalDepositsUSD = movements
+  .filter((mov) => mov > 0)
+  .map((mov) => mov * eurToUsd)
+  .reduce((acc, mov) => acc + mov, 0);
+
+console.log(totalDepositsUSD);
 */
