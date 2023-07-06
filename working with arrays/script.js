@@ -33,7 +33,7 @@ const account4 = {
   pin: 4444,
 };
 
-const accounts = [account1, account2, account3, account4];
+let accounts = [account1, account2, account3, account4];
 
 // Elements
 const labelWelcome = document.querySelector(".welcome");
@@ -297,4 +297,16 @@ const totalDepositsUSD = movements
   .reduce((acc, mov) => acc + mov, 0);
 
 console.log(totalDepositsUSD);
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const firstWithdrawal = movements.find((mov) => mov < 0);
+console.log(firstWithdrawal);
+
+console.log(accounts);
+
+// const account = accounts.find((acc) => acc.owner === "Jessica Davis");
+// console.log(account);
+for (const acc of accounts) {
+  console.log(accounts[0]);
+}
 */
