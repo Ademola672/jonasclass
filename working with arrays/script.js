@@ -499,7 +499,7 @@ console.log(movements);
 
 movements.sort((a, b) => b - a);
 console.log(movements);
-*/
+
 const arr = [1, 2, 3, 4, 5, 6, 7];
 console.log(new Array(1, 2, 3, 4, 5, 6, 7));
 
@@ -534,3 +534,64 @@ labelBalance.addEventListener("click", function () {
 
   const movementsUi2 = [...document.querySelectorAll(".movements__value")];
 });
+*/
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Array methods practice
+// const movFunc = function () {};
+
+const bankDepositSum = accounts
+  .flatMap((acc) => acc.movements)
+  .filter((acc) => acc > 0)
+  .reduce((sum, cur) => sum + cur, 0);
+
+console.log(bankDepositSum);
+
+//2
+// const numDeposit1000 = accounts
+//   .flatMap((acc) => acc.movements)
+//   .filter((acc) => acc >= 1000).length;
+
+const numDeposit1000 = accounts
+  .flatMap((acc) => acc.movements)
+  // .reduce((count, cur) => (cur >= 1000 ? count + 1 : count), 0);
+  .reduce((count, cur) => (cur >= 1000 ? ++count : count), 0);
+
+console.log(
+  accounts.flatMap((acc) => acc.movements).filter((acc) => acc >= 1000)
+);
+console.log(numDeposit1000);
+
+//Prefixed ++ operator
+let a = 10;
+console.log(++a);
+console.log(a);
+
+//3
+const { deposits, withdrawals } = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce(
+    (sums, cur) => {
+      // cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
+      sums[cur > 0 ? "deposits" : "withdrawals"] += cur;
+      return sums;
+    },
+    { deposits: 0, withdrawals: 0 }
+  );
+console.log(deposits, withdrawals);
+
+//4
+//this is a nice title => This Is a Nice Title
+const convertTitleCase = function (title) {
+  const capitalize = (str) => str[0].toUpperCase() + str.slice(1);
+
+  const exceptions = ["a", "an", "and", "but", "or", "on", "in", "with"];
+  const titleCase = title
+    .toLowerCase()
+    .split(" ")
+    .map((word) => (exceptions.includes(word) ? word : capitalize(word)))
+    .join(" ");
+  return capitalize(titleCase);
+};
+console.log(convertTitleCase("this is a nice title"));
+console.log(convertTitleCase("this is a LONG title but not too long"));
+console.log(convertTitleCase("and here Is another title with an EXAMPLE"));
