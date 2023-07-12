@@ -534,7 +534,7 @@ labelBalance.addEventListener("click", function () {
 
   const movementsUi2 = [...document.querySelectorAll(".movements__value")];
 });
-*/
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Array methods practice
 // const movFunc = function () {};
@@ -595,3 +595,4 @@ const convertTitleCase = function (title) {
 console.log(convertTitleCase("this is a nice title"));
 console.log(convertTitleCase("this is a LONG title but not too long"));
 console.log(convertTitleCase("and here Is another title with an EXAMPLE"));
+*/
