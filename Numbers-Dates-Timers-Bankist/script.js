@@ -281,7 +281,7 @@ console.log(Number.isNaN("20"));
 console.log(Number.isNaN(+"20x"));
 console.log(Number.isNaN(23 / 0));
 
-//Checking if value is a number
+//Checking if value is a number.
 console.log(Number.isFinite(20));
 console.log(Number.isFinite("20"));
 console.log(Number.isFinite(+"20x"));
