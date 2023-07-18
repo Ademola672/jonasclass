@@ -1,29 +1,26 @@
 "use strict";
-const modal = document.querySelector(".modal");
-const btnCloseModal = document.querySelector(".btn");
-const overlay = document.querySelector(".overlay");
-const sub = document.querySelectorAll(".btn-open");
-console.log(sub);
+const body = document.querySelector(".body");
+const image = document.querySelectorAll(".image");
+const image1 = document.querySelector(".image1");
+const image2 = document.querySelector(".image2");
+const image3 = document.querySelector(".image3");
+console.log(image);
 
-const openModal = function () {
-  modal.classList.remove("toggle");
-  overlay.classList.remove("toggle");
+const colorchg = function () {
+  body.style.backgroundColor = "#bc986a";
 };
 
-const closeModal = function () {
-  modal.classList.add("toggle");
-  overlay.classList.add("toggle");
-};
+body.addEventListener("click", function () {
+  colorchg();
+});
 
-for (let i = 0; i < sub.length; i++)
-  sub[i].addEventListener("click", openModal);
-
-btnCloseModal.addEventListener("click", closeModal);
-
-overlay.addEventListener("click", closeModal);
-
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && !modal.classList.contains("toggle")) {
-    closeModal();
+image.addEventListener("click", function () {
+  for (let i = 0; i < image.length; i++) {
+    image[i].style.borderRadius = "3rem";
+    image[i].style.height = "14rem";
   }
 });
+
+// image.addEventListener("click", function () {
+//   picf();
+// });
