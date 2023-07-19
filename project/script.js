@@ -14,12 +14,19 @@ body.addEventListener("click", function () {
   colorchg();
 });
 
-image.addEventListener("click", function () {
-  for (let i = 0; i < image.length; i++) {
-    image[i].style.borderRadius = "3rem";
-    image[i].style.height = "14rem";
-  }
-});
+for (let i = 0; i < image.length; i++) {
+  (function () {
+    image[i].addEventListener("mouseover", function () {
+      image[i].style.borderRadius = "3rem";
+      image[i].style.height = "14rem";
+    });
+  })();
+
+  image[i].addEventListener("mouseout", function () {
+    image[i].style.borderRadius = "";
+    image[i].style.height = "";
+  });
+}
 
 // image.addEventListener("click", function () {
 //   picf();
