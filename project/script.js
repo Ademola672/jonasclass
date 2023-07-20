@@ -1,10 +1,10 @@
 "use strict";
 const body = document.querySelector(".body");
-const image = document.querySelectorAll(".image");
+const images = document.querySelectorAll(".image");
 const image1 = document.querySelector(".image1");
 const image2 = document.querySelector(".image2");
 const image3 = document.querySelector(".image3");
-console.log(image);
+console.log(images);
 
 const colorchg = function () {
   body.style.backgroundColor = "#bc986a";
@@ -14,20 +14,14 @@ body.addEventListener("click", function () {
   colorchg();
 });
 
-for (let i = 0; i < image.length; i++) {
-  (function () {
-    image[i].addEventListener("mouseover", function () {
-      image[i].style.borderRadius = "3rem";
-      image[i].style.height = "14rem";
-    });
-  })();
-
-  image[i].addEventListener("mouseout", function () {
-    image[i].style.borderRadius = "";
-    image[i].style.height = "";
+images.forEach((image) => {
+  image.addEventListener("mouseover", function () {
+    image.style.borderRadius = "3rem";
+    image.style.height = "14rem";
   });
-}
 
-// image.addEventListener("click", function () {
-//   picf();
-// });
+  image.addEventListener("mouseout", function () {
+    image.style.borderRadius = "";
+    image.style.height = "";
+  });
+});
