@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+
+.header {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 0;
+}
+
+.header > h1 {
+  color: #1a237e;
+  margin: 0;
+}
+
+.sub-header {
+  text-align: center;
+  margin: 0, 0;
+  font-size: 1rem;
+}
+
+.sub-header > h2 {
+  color: #004d40;
+  margin: 0;
+}
+
+.sub-header > h1 {
+  margin: 0;
+}
+
+.time {
+  font-size: 3rem;
+  margin-top: 0;
+}
+
+.image-sec {
+  width: 100vw;
+  height: 30rem;
+  display: flex;
+  justify-content: center; /*Horizontal centering*/
+  align-items: center; /*Vertical centering*/
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-text {
+  position: absolute;
+  top: 93%; /* Adjust the top and left values to position the text as desired */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Change the text color as needed */
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold; /* Change font weight or other text styles as needed */
+  text-align: center; /* Align the text in the center */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Add a semi-transparent background for better readability */
+  padding: 10px 20px; /* Add padding around the text for better appearance */
+}
+
+.dropdown-sec {
+  text-align: center;
+}
+
+.btn-sec {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.party-btn {
+  font-size: 1rem;
+  font-weight: bolder;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.8rem;
+}
