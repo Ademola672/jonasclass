@@ -16,6 +16,13 @@ const tabs = document.querySelectorAll(".operations__tab");
 const tabsContainer = document.querySelector(".operations__tab-container");
 const tabsContent = document.querySelectorAll(".operations__content");
 
+// rgb(255, 255, 255);
+const randomInt = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1) + min);
+
+const randomColor = () =>
+  `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+console.log(randomColor(0, 255));
 /////////////////////////////////////
 //Modal window
 
@@ -147,16 +154,53 @@ nav.addEventListener("mouseover", handleHover.bind(0.5));
 
 nav.addEventListener("mouseout", handleHover.bind(1));
 
-//Sticky navigation
-const initialCoords = section1.getBoundingClientRect();
-console.log(initialCoords);
+///////////////////////////////////////////////////////////////////////////
+// //Sticky navigation
+// const initialCoords = section1.getBoundingClientRect();
+// console.log(initialCoords);
 
-window.addEventListener("scroll", function () {
-  console.log(this.window.scrollY);
+// window.addEventListener("scroll", function () {
+//   console.log(this.window.scrollY);
 
-  if (this.window.scrollY > initialCoords.top) nav.classList.add("sticky");
+//   if (this.window.scrollY > initialCoords.top) nav.classList.add("sticky");
+//   else nav.classList.remove("sticky");
+// });
+
+//Sticky Navigation intersection observer API
+
+// const obsCallback = function (enteries, observer) {
+//   enteries.forEach((entry) => {
+//     console.log(entry);
+//   });
+// };
+
+// const obsOptions = {
+//   root: null,
+//   threshold: [0, 0.2],
+// };
+
+// const observer = new IntersectionObserver(obsCallback, obsOptions);
+// observer.observe(section1);
+
+const header = document.querySelector(".header");
+const navHeight = nav.getBoundingClientRect().height;
+console.log(navHeight);
+
+const stickNav = function (enteries) {
+  const [entry] = enteries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) nav.classList.add("sticky");
   else nav.classList.remove("sticky");
+};
+
+const headerObserver = new IntersectionObserver(stickNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `${navHeight}px`,
 });
+
+headerObserver.observe(header);
 /////////////////////////////////////////////////
 ///////////////////////////////////////
 /*
@@ -256,14 +300,6 @@ h1.addEventListener("mouseenter", alertH1);
 
 setTimeout(() => h1.removeEventListener("mouseenter", alertH1), 3000);
 */
-
-//rgb (255, 255, 255)
-// const randomInt = (min, max) =>
-//   Math.floor(Math.random() * (max - min + 1) + min);
-
-// const randomColor = () =>
-//   `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
-// console.log(randomColor(0, 255));
 
 // document.querySelector(".nav__link").addEventListener("click", function (e) {
 //   this.style.backgroundColor = randomColor();
