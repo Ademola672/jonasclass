@@ -38,6 +38,16 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
+document.querySelector(".nav__links").addEventListener("click", function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log("CONTAINER", e.target, e.currentTarget);
+});
+
+document.querySelector(".nav").addEventListener("click", function (e) {
+  this.style.backgroundColor = randomColor();
+  console.log("NAV", e.target, e.currentTarget);
+});
+
 /////////////////////////////////////////////////////////////////
 //Button Scrollig
 
@@ -82,19 +92,18 @@ btnScrollTo.addEventListener("click", function (e) {
 // });
 
 // 1. Add event listener to common prent element
-// 2. Determine what element originaated the event 
+// 2. Determine what element originaated the event
 
-document.querySelector('.nav__link').addEventListener('click', function(e) {
-  e.preventDefault()
+document.querySelector(".nav__link").addEventListener("click", function (e) {
+  e.preventDefault();
 
   //Matching strtegy
-  if(e.target.classList.contains('nav__link')) {
-    const id = e.target.getAttribute('href')
+  if (e.target.classList.contains("nav__link")) {
+    const id = e.target.getAttribute("href");
     console.log(id);
-    document.querySelector(id).scrollIntoView({behavior: 'smooth'})
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   }
-
-}), 
+});
 
 /////////////////////////////////////////////////
 ///////////////////////////////////////
@@ -196,27 +205,47 @@ setTimeout(() => h1.removeEventListener("mouseenter", alertH1), 3000);
 */
 
 //rgb (255, 255, 255)
-const randomInt = (min, max) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
+// const randomInt = (min, max) =>
+//   Math.floor(Math.random() * (max - min + 1) + min);
 
-const randomColor = () =>
-  `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
-console.log(randomColor(0, 255));
+// const randomColor = () =>
+//   `rgb(${randomInt(0, 255)},${randomInt(0, 255)},${randomInt(0, 255)})`;
+// console.log(randomColor(0, 255));
 
-document.querySelector(".nav__link").addEventListener("click", function (e) {
-  this.style.backgroundColor = randomColor();
-  console.log("LINK", e.target, e.currentTarget);
+// document.querySelector(".nav__link").addEventListener("click", function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log("LINK", e.target, e.currentTarget);
 
-  //stop propagation
-  // e.stopPropagtion();
-});
+//   //stop propagation
+//   // e.stopPropagtion();
+// });
 
-document.querySelector(".nav__links").addEventListener("click", function (e) {
-  this.style.backgroundColor = randomColor();
-  console.log("CONTAINER", e.target, e.currentTarget);
-});
+const h1 = document.querySelector("h1");
 
-document.querySelector(".nav").addEventListener("click", function (e) {
-  this.style.backgroundColor = randomColor();
-  console.log("NAV", e.target, e.currentTarget);
+//Going downwards: child
+
+console.log(h1.querySelectorAll(".highlight"));
+console.log(h1.childNodes);
+console.log(h1.children);
+h1.firstElementChild.style.color = "white";
+h1.lastElementChild.style.color = "orangered";
+
+//Going upwards: parents
+console.log(h1.parentNode);
+console.log(h1.parentElement);
+
+h1.closest(".header").style.background = "var(--gradient-secondary)";
+
+h1.closest("h1").style.background = "var(--gradient-primary)";
+
+//Going sideways : siblings
+console.log(h1.previousElementSibling);
+console.log(h1.nextElementSibling);
+
+console.log(h1.previousSibling);
+console.log(h1.nextSiblingSibling);
+
+console.log(h1.parentElement.children);
+[...h1.parentElement.children].forEach(function (el) {
+  if (el !== h1) el.style.transform = "scale(0.5)";
 });
