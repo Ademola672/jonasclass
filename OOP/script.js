@@ -48,3 +48,23 @@ console.log(jonas.species, matilda.species);
 
 console.log(jonas.hasOwnProperty("firstName"));
 console.log(jonas.hasOwnProperty("species"));
+
+console.log(jonas.__proto__);
+// Object.prototype(top of the prototype chain)
+console.log(jonas.__proto__.__proto__);
+console.log(jonas.__proto__.__proto__.__proto__);
+
+console.log(Person.prototype.constructor);
+
+const arr = [3, 6, 4, 5, 6, 9, 3];
+console.log(arr.__proto__);
+console.log(arr.__proto__ === Array.prototype);
+
+console.log(arr.__proto__.__proto__);
+
+Array.prototype.unique = function () {
+  return [...new Set(this)];
+};
+
+console.log(arr.unique());
+console.dir((x) => x + 1);
