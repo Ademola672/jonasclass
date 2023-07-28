@@ -22,7 +22,7 @@ DATA CAR 1: 'BMW' going at 120 km/h
 DATA CAR 2: 'Mercedes' going at 95 km/h
 
 GOOD LUCK 😀
-*/
+
 
 // const Car = function (make, speed) {
 //   this.make = make;
@@ -54,3 +54,4 @@ bmw.accelerate();
 bmw.brake();
 bmw.accelerate();
 bmw.brake();
+*/
